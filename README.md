@@ -8,11 +8,11 @@ This project focuses on fine-tuning the Unsloth/Llama-3.2-1B-Instruct model usin
 Once the model is fine-tuned, a Gradio-powered chatbot interface is provided to interact with the model. The chatbot can engage in conversations and respond to user queries based on the training it received.
 Key Features
 
-    Efficient Fine-Tuning: We fine-tuned the 1B parameter Llama model using LoRA in just 2200 steps with the FineTome-100k dataset, significantly reducing memory usage while maintaining quality.
+Efficient Fine-Tuning: We fine-tuned the 1B parameter Llama model using LoRA in just 2200 steps with the FineTome-100k dataset, significantly reducing memory usage while maintaining quality.
 
-    Real-Time Chatbot: The fine-tuned model powers an interactive chatbot built with Gradio, where users can send messages and receive dynamic, context-aware responses.
+Real-Time Chatbot: The fine-tuned model powers an interactive chatbot built with Gradio, where users can send messages and receive dynamic, context-aware responses.
 
-    Streaming Responses: Chatbot responses are generated in real time for a more interactive experience, providing a natural flow of conversation.
+Streaming Responses: Chatbot responses are generated in real time for a more interactive experience, providing a natural flow of conversation.
 
 How It Works
 Fine-Tuning the Model
@@ -24,8 +24,7 @@ Once the model is fine-tuned, a Gradio interface is built for interacting with t
 Setup
 
 To get started with the project, follow the steps below:
-
-    Clone this repository:
+Clone this repository:
 
 git clone https://github.com/your-username/llama-chatbot.git
 cd llama-chatbot
@@ -39,29 +38,24 @@ pip install -r requirements.txt
 Run the chatbot locally:
 
 Once dependencies are installed, you can run the Gradio interface with the following command:
-
-    python app.py
-
-    This will start a local server, and you can interact with the chatbot via a web interface.
-
-    Deploy on HuggingFace Spaces (optional):
-
-    If you wish to deploy the chatbot on HuggingFace Spaces for public access, you can upload the model to HuggingFace and follow the instructions on their site for setting up a space.
+python app.py
+This will start a local server, and you can interact with the chatbot via a web interface.
+Deploy on HuggingFace Spaces (optional):
+If you wish to deploy the chatbot on HuggingFace Spaces for public access, you can upload the model to HuggingFace and follow the instructions on their site for setting up a space.
 
 File Structure
-
-    app.py: The main Python script that initializes the Gradio app and handles chatbot interactions.
-    chatbot.py: Contains the logic for the chatbot, including handling user input and maintaining conversation history.
-    requirements.txt: A list of dependencies required to run the application.
-    fine_tuning_notebook.ipynb: A Jupyter notebook that details the fine-tuning process using the LoRA technique.
+app.py: The main Python script that initializes the Gradio app and handles chatbot interactions.
+chatbot.py: Contains the logic for the chatbot, including handling user input and maintaining conversation history.
+requirements.txt: A list of dependencies required to run the application.
+fine_tuning_notebook.ipynb: A Jupyter notebook that details the fine-tuning process using the LoRA technique.
 
 Inference Pipeline
 
 The fine-tuned model is loaded and used for inference through the following steps:
 
-    Tokenization: The user’s input is tokenized using the AutoTokenizer from HuggingFace.
-    Model Generation: The tokenized input is passed through the fine-tuned Llama-3.2-1B-Instruct model to generate a response. The model uses LoRA to efficiently handle this in reduced memory.
-    Streaming Output: The generated response is decoded and sent back to the user in real-time, allowing for smooth interactions.
+Tokenization: The user’s input is tokenized using the AutoTokenizer from HuggingFace.
+Model Generation: The tokenized input is passed through the fine-tuned Llama-3.2-1B-Instruct model to generate a response. The model uses LoRA to efficiently handle this in reduced memory.
+Streaming Output: The generated response is decoded and sent back to the user in real-time, allowing for smooth interactions.
 
 Requirements
 
