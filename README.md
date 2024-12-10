@@ -82,6 +82,12 @@ Streaming Output: The generated response is decoded and sent back to the user in
 
 The model-centric approach primarily focuses on improving the model architecture, training algorithms, and hyperparameters. It emphasizes optimizing the learning process by tweaking aspects that directly impact the model’s learning ability and how it generalizes from training data. We focussed on fine-tuning the model’s hyperparameters, such as learning rate, batch size, and weight decay. These hyperparameters control how the model optimizes during training, affecting both convergence speed and training stability. We experimented with the parameters lr_schedulers(linear, cosine, constant), weight_decays( 0.0, 0.01,0.1), and batch_sizes(2,4,8,16).
 
+![Screenshot 2024-12-10 184619](https://github.com/user-attachments/assets/3b6cb5c1-2fb2-4a24-878b-0f691442d95a)
+
+![Screenshot 2024-12-10 184328](https://github.com/user-attachments/assets/30ac7983-705f-45d9-98cd-541c73189869)
+
+![Screenshot 2024-12-10 184328](https://github.com/user-attachments/assets/f968cea5-c9ec-4c78-b650-79b1a67fd330)
+
 2. Data-Centric Approach
 
 The data-centric approach, on the other hand, emphasizes improving the quality of the data rather than changing the model itself. This approach assumes that high-quality data is a critical factor in model performance and that improving the dataset often yields greater benefits than further model refinement. So, we may strategically select a smaller, but more representative subset of the data, to help the model focus on high-quality examples rather than noisy ones.
