@@ -69,10 +69,14 @@ You can install them all at once using:
 pip install -r requirements.txt
 
 ## Finetuning the models
+1. Model-Centric Approach
 
-1. Data centric approach:
+The model-centric approach primarily focuses on improving the model architecture, training algorithms, and hyperparameters. It emphasizes optimizing the learning process by tweaking aspects that directly impact the model’s learning ability and how it generalizes from training data. We focussed on fine-tuning the model’s hyperparameters, such as learning rate, batch size, and weight decay. These hyperparameters control how the model optimizes during training, affecting both convergence speed and training stability.
 
-2. Model centric approach:
+2. Data-Centric Approach
+
+The data-centric approach, on the other hand, emphasizes improving the quality of the data rather than changing the model itself. This approach assumes that high-quality data is a critical factor in model performance and that improving the dataset often yields greater benefits than further model refinement. So, we may strategically select a smaller, but more representative subset of the data, to help the model focus on high-quality examples rather than noisy ones.
+If certain classes are underrepresented in the dataset, we can over-sample them or use other techniques like Random oversampling, SMOTE (Synthetic Minority Over-sampling Technique), AdaSyn, Borderline SMOTE to balance class distributions.
 
 
 
