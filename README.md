@@ -2,7 +2,7 @@
 
 This project demonstrates how to fine-tune a large language model using Parameter-Efficient Fine-Tuning (PEFT) and integrates it into a chatbot application using Gradio. The goal is to make inference on large language models more efficient and accessible, even with limited GPU resources.
 
-##Overview
+## Overview
 
 This project focuses on fine-tuning the Unsloth/Llama-3.2-1B-Instruct model using LoRA (Low-Rank Adaptation), a PEFT technique that reduces the memory requirements of large models. We use 4-bit precision to further optimize memory consumption, making it feasible to run on lower-end GPUs.
 
@@ -15,7 +15,7 @@ Real-Time Chatbot: The fine-tuned model powers an interactive chatbot built with
 
 Streaming Responses: Chatbot responses are generated in real time for a more interactive experience, providing a natural flow of conversation.
 
-##How It Works
+## How It Works
 Fine-Tuning the Model
 
 The model was fine-tuned using a subset of the FineTome-100k dataset, which has been pre-processed into the HuggingFace format. The 4-bit precision ensures that the model can run on devices with limited GPU memory. To preserve progress, automatic checkpointing was used, ensuring that every 50 steps the model’s state was saved.
@@ -58,7 +58,7 @@ Tokenization: The user’s input is tokenized using the AutoTokenizer from Huggi
 Model Generation: The tokenized input is passed through the fine-tuned Llama-3.2-1B-Instruct model to generate a response. The model uses LoRA to efficiently handle this in reduced memory.
 Streaming Output: The generated response is decoded and sent back to the user in real-time, allowing for smooth interactions.
 
-Requirements
+## Requirements
 
 To run this project, you'll need the following Python packages:
 
