@@ -26,7 +26,7 @@ Setup
 To get started with the project, follow the steps below:
 Clone this repository:
 
-git clone https://github.com/your-username/llama-chatbot.git
+git clone https://github.com/manjy0t/lab2_scalable.git
 cd llama-chatbot
 
 Install dependencies:
