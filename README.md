@@ -25,18 +25,18 @@ Once the model is fine-tuned, a Gradio interface is built for interacting with t
 Setup
 
 To get started with the project, follow the steps below:
-Clone this repository:
-
+1. Clone this repository:
 git clone https://github.com/manjy0t/lab2_scalable.git
+
 cd llama-chatbot
 
-Install dependencies:
+2. Install dependencies:
 
 You'll need Python 3.8+ and some dependencies to run the application. Install them using pip:
 
 pip install -r requirements.txt
 
-Run the chatbot locally:
+3. Run the chatbot locally:
 
 Once dependencies are installed, you can run the Gradio interface with the following command:
 python app.py
@@ -46,9 +46,7 @@ If you wish to deploy the chatbot on HuggingFace Spaces for public access, you c
 
 File Structure
 app.py: The main Python script that initializes the Gradio app and handles chatbot interactions.
-chatbot.py: Contains the logic for the chatbot, including handling user input and maintaining conversation history.
 requirements.txt: A list of dependencies required to run the application.
-fine_tuning_notebook.ipynb: A Jupyter notebook that details the fine-tuning process using the LoRA technique.
 
 Inference Pipeline
 
