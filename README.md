@@ -68,5 +68,11 @@ You can install them all at once using:
 
 pip install -r requirements.txt
 
+##Finetuning the models
+
+1. Data centric approach:
+
+2. Model centric approach:
+
 
 
