@@ -9,7 +9,7 @@ This project focuses on fine-tuning the Unsloth/Llama-3.2-1B-Instruct model usin
 Once the model is fine-tuned, a Gradio-powered chatbot interface is provided to interact with the model. The chatbot can engage in conversations and respond to user queries based on the training it received.
 Key Features
 
-Efficient Fine-Tuning: We fine-tuned the 1B parameter Llama model using LoRA in just 2200 steps with the FineTome-100k dataset, significantly reducing memory usage while maintaining quality.
+Efficient Fine-Tuning: We fine-tuned the 1B parameter Llama model using LoRA in just 4000 steps with the FineTome-100k dataset, significantly reducing memory usage while maintaining quality.
 
 Real-Time Chatbot: The fine-tuned model powers an interactive chatbot built with Gradio, where users can send messages and receive dynamic, context-aware responses.
 
