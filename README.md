@@ -82,11 +82,12 @@ Streaming Output: The generated response is decoded and sent back to the user in
 
 The model-centric approach primarily focuses on improving the model architecture, training algorithms, and hyperparameters. It emphasizes optimizing the learning process by tweaking aspects that directly impact the model’s learning ability and how it generalizes from training data. We focussed on fine-tuning the model’s hyperparameters, such as learning rate, batch size, and weight decay. These hyperparameters control how the model optimizes during training, affecting both convergence speed and training stability. We experimented with the parameters lr_schedulers(linear, cosine, constant), weight_decays( 0.0, 0.01,0.1), and batch_sizes(2,4,8,16).
 
-![Screenshot 2024-12-10 184619](https://github.com/user-attachments/assets/3b6cb5c1-2fb2-4a24-878b-0f691442d95a)
 
-![Screenshot 2024-12-10 184328](https://github.com/user-attachments/assets/30ac7983-705f-45d9-98cd-541c73189869)
+![Screenshot 2024-12-10 184328](https://github.com/user-attachments/assets/f1637579-44bf-47ee-b690-adb5ebc878aa)
 
-![Screenshot 2024-12-10 184328](https://github.com/user-attachments/assets/f968cea5-c9ec-4c78-b650-79b1a67fd330)
+![Screenshot 2024-12-10 184407](https://github.com/user-attachments/assets/fb5c7b42-00f7-462b-b69c-13e21e752bea)
+
+![Screenshot 2024-12-10 184514](https://github.com/user-attachments/assets/4a63e8fc-bdb6-4fb0-bcfa-0a7a4d4985fc)
 
 Further, the hyperparameters for the LoRA adapter could also be tested. This was not implemented due to time contraints. Reasonably, the rank of LoRA matrices could impact both loss and training time, as higher rank allows the model to capture more information because it adds more trainable parameters. This might reduce the loss for complex datasets. However, setting the rank too high could lead to overfitting. Increasing the rank increases the number of parameters to optimize, which leads to longer training times. Similarly, the scaling factor (alpha) could affect training time as larger alpha may require more gradient updates to stabilize the model, slightly increasing training time due to smaller learning steps required for convergence. Higher values of alpha also amplify the updates, which might improve loss convergence initially but could lead to instability if the updates are too large. Another factor that could influence these performance metrics is dropout. Dropout helps prevent overfitting by randomly disabling connections during training. Higher dropout rates might increase the loss initially due to reduced capacity but can result in better generalization. As for training time, the effect is less significant. Applying dropout slightly increases training time since the effective model capacity is reduced, requiring some more updates to converge.
 
