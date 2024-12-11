@@ -87,27 +87,24 @@ The fine-tuned model is loaded and used for inference through the following step
 
 ---
 
-## **Fine-Tuning the Models**  
 
-### **1. Model-Centric Approach**  
-This approach focuses on optimizing the model's architecture, training algorithms, and hyperparameters. We fine-tuned the model's hyperparameters, such as learning rate, batch size, and weight decay. These adjustments impacted both convergence speed and training stability.  
+## Finetuning the models
+1. Model-Centric Approach
 
-Experiments included:  
-- **Learning Rate Schedulers**: Linear, cosine, and constant.  
-- **Weight Decay Values**: 0.0, 0.01, and 0.1.  
-- **Batch Sizes**: 2, 4, 8, and 16.  
+The model-centric approach primarily focuses on improving the model architecture, training algorithms, and hyperparameters. It emphasizes optimizing the learning process by tweaking aspects that directly impact the model’s learning ability and how it generalizes from training data. We focussed on fine-tuning the model’s hyperparameters, such as learning rate, batch size, and weight decay. These hyperparameters control how the model optimizes during training, affecting both convergence speed and training stability. We experimented with the parameters lr_schedulers(linear, cosine, constant), weight_decays( 0.0, 0.01,0.1), and batch_sizes(2,4,8,16).
 
-Further exploration of LoRA adapter hyperparameters, such as rank and scaling factor (alpha), was not implemented due to time constraints. These parameters could significantly affect performance metrics:  
-- **Rank**: Higher rank increases trainable parameters but risks overfitting.  
-- **Alpha**: Larger values amplify updates, improving convergence initially but risking instability.  
-- **Dropout**: Helps prevent overfitting by randomly disabling connections during training.  
+![Screenshot 2024-12-11 075626](https://github.com/user-attachments/assets/a1e9fae1-a4fa-4a9f-9e24-82b1fa4341f3)
 
----
+![Screenshot 2024-12-10 184407](https://github.com/user-attachments/assets/fb5c7b42-00f7-462b-b69c-13e21e752bea)
 
-### **2. Data-Centric Approach**  
-This approach focuses on improving data quality rather than modifying the model. High-quality data often yields greater benefits than model refinements. Techniques include:  
-- **Strategic Subset Selection**: Choose a smaller, representative subset of data to focus on quality over quantity.  
-- **Class Balancing**: Address underrepresented classes using oversampling methods like SMOTE, AdaSyn, or borderline SMOTE.  
+![Screenshot 2024-12-10 184514](https://github.com/user-attachments/assets/4a63e8fc-bdb6-4fb0-bcfa-0a7a4d4985fc)
 
----
+Further, the hyperparameters for the LoRA adapter could also be tested. This was not implemented due to time contraints. Reasonably, the rank of LoRA matrices could impact both loss and training time, as higher rank allows the model to capture more information because it adds more trainable parameters. This might reduce the loss for complex datasets. However, setting the rank too high could lead to overfitting. Increasing the rank increases the number of parameters to optimize, which leads to longer training times. Similarly, the scaling factor (alpha) could affect training time as larger alpha may require more gradient updates to stabilize the model, slightly increasing training time due to smaller learning steps required for convergence. Higher values of alpha also amplify the updates, which might improve loss convergence initially but could lead to instability if the updates are too large. Another factor that could influence these performance metrics is dropout. Dropout helps prevent overfitting by randomly disabling connections during training. Higher dropout rates might increase the loss initially due to reduced capacity but can result in better generalization. As for training time, the effect is less significant. Applying dropout slightly increases training time since the effective model capacity is reduced, requiring some more updates to converge.
+
+2. Data-Centric Approach
+
+The data-centric approach, on the other hand, emphasizes improving the quality of the data rather than changing the model itself. This approach assumes that high-quality data is a critical factor in model performance and that improving the dataset often yields greater benefits than further model refinement. So, we may strategically select a smaller, but more representative subset of the data, to help the model focus on high-quality examples rather than noisy ones.
+If certain classes are underrepresented in the dataset, we can over-sample them or use other techniques like Random oversampling, SMOTE (Synthetic Minority Over-sampling Technique), AdaSyn, Borderline SMOTE to balance class distributions.
+
+
 
