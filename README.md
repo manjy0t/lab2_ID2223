@@ -1,7 +1,7 @@
 
 ---
 
-# ** Fine-Tuned Llama Model for Efficient Inference with Gradio**  
+# **Fine-Tuned Llama Model for Efficient Inference with Gradio**  
 
 This project demonstrates how to fine-tune a large language model using Parameter-Efficient Fine-Tuning (PEFT) and integrate it into a chatbot application using Gradio. The goal is to make inference on large language models more efficient and accessible, even with limited GPU resources.  
 
