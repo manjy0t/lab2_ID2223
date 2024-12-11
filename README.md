@@ -1,4 +1,4 @@
-# **Fine-Tuned Llama Model for Efficient Inference with Gradio**
+![Screenshot 2024-12-10 184619](https://github.com/user-attachments/assets/f57b268a-1db3-4dcd-967d-9c552ea0c00e)# **Fine-Tuned Llama Model for Efficient Inference with Gradio**
 
 This project demonstrates how to fine-tune a large language model using Parameter-Efficient Fine-Tuning (PEFT) and integrates it into a chatbot application using Gradio. The goal is to make inference on large language models more efficient and accessible, even with limited GPU resources.
 
@@ -82,7 +82,7 @@ Streaming Output: The generated response is decoded and sent back to the user in
 
 The model-centric approach primarily focuses on improving the model architecture, training algorithms, and hyperparameters. It emphasizes optimizing the learning process by tweaking aspects that directly impact the model’s learning ability and how it generalizes from training data. We focussed on fine-tuning the model’s hyperparameters, such as learning rate, batch size, and weight decay. These hyperparameters control how the model optimizes during training, affecting both convergence speed and training stability. We experimented with the parameters lr_schedulers(linear, cosine, constant), weight_decays( 0.0, 0.01,0.1), and batch_sizes(2,4,8,16).
 
-![Screenshot 2024-12-10 184619](https://github.com/user-attachments/assets/b14da7a4-e7a4-4208-a963-3e725c7a09df)
+![Screenshot 2024-12-11 075626](https://github.com/user-attachments/assets/a1e9fae1-a4fa-4a9f-9e24-82b1fa4341f3)
 
 ![Screenshot 2024-12-10 184407](https://github.com/user-attachments/assets/fb5c7b42-00f7-462b-b69c-13e21e752bea)
 
